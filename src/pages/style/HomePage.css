@@ -1,0 +1,55 @@
+.homePage{
+    background-color: #FEFEFE;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    .homePage__containerCards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.3em;
+        padding: 1em;
+    }
+
+
+    .aside{
+        width: 25%;
+        height: 100%;
+
+        .aside__container{
+            width: 100%;
+            height: 100%;
+            padding: 2em 1em;
+           
+           .aside__section{
+                display: flex;
+                width: 100%;
+                
+                .aside__input{
+                    padding: .5em;
+                    text-transform: capitalize;
+                    outline: none;
+                    border: 1px solid #ccca;
+                    border-radius: 5px 0 0 5px;
+                }
+                
+                .aside__button{
+                    display: block;
+                    padding: .5em;
+                    background-color: #D35451;
+                    border-radius: 0 5px 5px 0;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+
+                }
+            }
+
+            .aside__title{
+                padding: 1em 0;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.filter{
+    width: 100%;
+
+    .filter__form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .filter__label{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .filter__span{
+                color: gray;
+                padding-top: 0.5em;
+            }
+
+            .filter__input{
+                display: block;
+                width: 100%;
+                padding: .4em;
+                margin: 0.5em 0;
+                border: solid 1px #ccca;
+                border-radius: 5px;
+            }
+
+        }
+        .filter__button{
+            padding: .4em;
+            margin: .5em 0;
+            background-color: #D35451;
+            border: 1px solid #ccca;
+            color: white;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #e23431;
+            }
+        }
+    }
+}
