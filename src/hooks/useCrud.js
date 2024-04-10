@@ -16,7 +16,10 @@ const useCrud = (url) => {
     //postApi
     const postApi = (data) => {
         axios.post(url, data, getConfigToken())
-        .then(res => setResponse([...response, res.data]))
+        .then(res => {
+            console.log(res.data)
+            setResponse(response ? [...response, res.data]: [res.data])
+        })
         .catch(err => console.log(err))
 
     }
@@ -39,7 +42,7 @@ const useCrud = (url) => {
         .catch(err => console.log(err))
     }
 
-    return [getApi, postApi, deleteApi, updateApi]
+    return [response, getApi, postApi, deleteApi, updateApi]
 }
 
 export default useCrud

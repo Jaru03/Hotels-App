@@ -8,6 +8,8 @@ import LoginPage from './pages/LoginPage'
 import { getHotelsThunk } from './store/slices/hotels.slices'
 import HotelsIdPage from './pages/HotelsIdPage'
 import PrincipalHeader from './components/shared/PrincipalHeader'
+import ReservationsPage from './pages/ReservationsPage'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 function App() {
 
@@ -25,7 +27,10 @@ function App() {
         <Route path='/hotels/:id' element={<HotelsIdPage/>}/>
         <Route path='/register' element={<RegisterPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        
+        <Route element={<ProtectedRoutes/>}>
+
+          <Route path='/reservations' element={<ReservationsPage/>}/>
+        </Route>
       </Routes>
     </div>
   )

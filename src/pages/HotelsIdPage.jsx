@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch"
 import { useEffect } from "react"
 import { Map, Marker, Overlay } from "pigeon-maps"
@@ -26,7 +26,7 @@ const HotelsIdPage = () => {
       {
         hotel &&
 
-        <Map height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={15} maxZoom={16} minZoom={10} >
+        <Map height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={12} maxZoom={13} minZoom={10} >
         <Overlay anchor={[+hotel?.lat, +hotel?.lon]}>
           <img src='../hotelIcon.png'  width={50} height={50} alt="" />
         </Overlay>
@@ -39,7 +39,12 @@ const HotelsIdPage = () => {
         </p>
         <p>{hotel?.description}</p>
       </section>
-      <FormReserve/>
+
+      {
+        localStorage.getItem('token')
+        ? <FormReserve hotelId={hotel?.id}/>
+        : <h3>If you want to make a reservation, please <Link to='/login'>Login</Link> </h3>
+      }
       <OtherHotels hotel={hotel}/>
     </div>
   )
