@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useCrud from '../hooks/useCrud'
 import Reservation from '../components/ReservationsPage/Reservation'
+import './style/ReservationsPage.css'
 
 const ReservationsPage = () => {
 
@@ -14,9 +15,9 @@ const ReservationsPage = () => {
   console.log(bookings)
 
   return (
-    <section>
-      <h2>Reservations</h2>
-      <div>
+    <section className='reservationPage'>
+      <h2 className='reservationPage__tittle'>Reservations</h2>
+      <div className='reservationPage__container'>
         {
           bookings?.map(booking => (
             <Reservation key={booking?.id} reserve={booking}/>

@@ -1,0 +1,16 @@
+.reservationPage{
+  padding: 1.5em;
+
+  .reservationPage__tittle{
+    text-align: center;
+    padding: 0 1.5em 1.5em;
+    font-size: 2em;
+  }
+
+  .reservationPage__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

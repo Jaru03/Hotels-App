@@ -39,7 +39,7 @@ const HomePage = () => {
             <input
               className="aside__input"
               onChange={handleChange}
-              placeholder="que buscas?"
+              placeholder="look for a hotel"
               value={inputName}
               ref={inputValue}
               type="text"
