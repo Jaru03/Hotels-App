@@ -14,7 +14,7 @@
 
 
     .aside{
-        width: 25%;
+        width: 16em;
         height: 100%;
 
         .aside__container{
@@ -42,7 +42,6 @@
                     color: white;
                     border: none;
                     cursor: pointer;
-
                 }
             }
 
