@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { Map, Marker, Overlay } from "pigeon-maps"
 import OtherHotels from "../components/HotelsIdPage/OtherHotels"
 import FormReserve from "../components/HotelsIdPage/FormReserve"
+import './style/HotelsIdPage.css'
 
 const HotelsIdPage = () => {
 
@@ -17,27 +18,33 @@ const HotelsIdPage = () => {
   }, [id])
 
   return (
-    <div>
-      <h2>{hotel?.name}</h2>
-      <h3>RATING - {hotel?.rating}</h3>
-      <div className="slider">
-        <img src={hotel?.images[0].url} alt="" />
+    <div className="hotelsId">
+      <h2 className="hotelsId__name">{hotel?.name}</h2>
+      <h3 className="hotelsId__rating">RATING - {hotel?.rating}</h3>
+      <div className="hotelsId__container--header">
+
+      <div className="hotelsId__slider">
+        <img className="hotelsId__img" src={hotel?.images[0].url} alt="" />
       </div>
+      <div className="hotelsId__map">
       {
         hotel &&
-
-        <Map height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={12} maxZoom={13} minZoom={10} >
+        
+        <Map height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={8} maxZoom={13} minZoom={8} >
         <Overlay anchor={[+hotel?.lat, +hotel?.lon]}>
           <img src='../hotelIcon.png'  width={50} height={50} alt="" />
         </Overlay>
-      </Map>}
-      <section>
-        <h3>{hotel?.city.name}, {hotel?.city.country}</h3>
-        <p>
-          <i className='bx bx-map'></i>
+      </Map>
+      }
+      </div>
+      </div>
+      <section className="hotelsId__info">
+        <h3 className="hotelsId__tittle">{hotel?.city.name}, {hotel?.city.country}</h3>
+        <p className="hotelsId__direcction">
+          <i className='hotelsId__icon bx bx-map'></i>
           <span>{hotel?.address}</span>
         </p>
-        <p>{hotel?.description}</p>
+        <p className="hotelsId__description">{hotel?.description}</p>
       </section>
 
       {

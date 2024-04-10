@@ -20,9 +20,9 @@ const OtherHotels = ({hotel}) => {
     console.log(hotelsInCity)
 
   return (
-    <section>
-        <h3>Other hotels in <span>{hotel?.city.name}</span></h3>
-        <div className="hotels__container">
+    <section className="otherHotels">
+        <h3 className="otherHotels__tittle">Other hotels in <span>{hotel?.city.name}</span></h3>
+        <div className="otherHotels__container">
             {
                 hotelsInCity?.filter(hotelInfo => hotelInfo.id !== hotel.id).map(hotelInfo => (
                     <HotelCard

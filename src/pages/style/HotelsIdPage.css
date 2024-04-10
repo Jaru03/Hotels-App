@@ -1,0 +1,52 @@
+.hotelsId{
+  padding: 1.5em;
+  .hotelsId__name{
+    text-align: center;
+  }
+
+  .hotelsId__rating{
+    text-align: center;
+  }
+
+  .hotelsId__container--header{
+
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+    .hotelsId__slider{
+    width: 25em;
+    
+    .hotelsId__img{
+      width: 100%;
+    }
+  }
+  
+    .hotelsId__map{
+      width: 30em;
+    }
+  }
+
+  .hotelsId__info{
+
+
+    .hotelsId__tittle{
+      padding: 1em 1em .5em;
+    }
+
+    .hotelsId__direcction{
+      padding: .5em 1em 1em;
+
+      .hotelsId__icon{
+        padding-right: .5em;
+        font-size: 1.3em;
+      }
+    }
+
+    .hotelsId__description{
+      text-wrap: balance;
+    }
+  }
+}
