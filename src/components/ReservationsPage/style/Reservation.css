@@ -127,3 +127,9 @@
     }
   }
 }
+
+@media (max-width: 450px){
+  .reservationCard{
+    width: 18em;
+  }
+}
