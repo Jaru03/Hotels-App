@@ -16,8 +16,6 @@ const OtherHotels = ({hotel}) => {
             
         }
     }, [hotel])
-    
-    console.log(hotelsInCity)
 
   return (
     <section className="otherHotels">

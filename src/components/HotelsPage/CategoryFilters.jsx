@@ -16,8 +16,6 @@ const CategoryFilters = () => {
     useEffect(() => {
       getCities()
     }, [])
-    
-    console.log(cities)
 
     const handleFilterCity = (id) => {
         let url

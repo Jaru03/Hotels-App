@@ -50,3 +50,15 @@
     }
   }
 }
+
+.loginText{
+  padding: 1em 0;
+  
+  a{
+    color: #e23431;
+    text-decoration: none;
+    &:hover{
+      color: red;
+    }
+  }
+}

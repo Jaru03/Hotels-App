@@ -50,7 +50,7 @@ const HotelsIdPage = () => {
       {
         localStorage.getItem('token')
         ? <FormReserve hotelId={hotel?.id}/>
-        : <h3>If you want to make a reservation, please <Link to='/login'>Login</Link> </h3>
+        : <h3 className="loginText">If you want to make a reservation, please <Link to='/login'>Login</Link> </h3>
       }
       <OtherHotels hotel={hotel}/>
     </div>
