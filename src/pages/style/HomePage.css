@@ -16,6 +16,7 @@
     .aside{
         width: 16em;
         height: 100%;
+        
 
         .aside__container{
             width: 100%;
@@ -50,5 +51,60 @@
                 text-align: center;
             }
         }
+    }
+}
+
+@media (max-width: 450px){
+
+    .homePage{
+        display: block;
+
+        .aside{
+            position: relative;
+            height: 100%;
+            
+            .aside__openTag{
+                position: fixed;
+            top: 10px;
+            left: 10px;
+            .aside__icon{
+                font-size: 2em;
+            }
+        }
+        .aside__container{
+            position: fixed;
+            transition: ease .5s;
+            height: 100vh;
+            width: 18em;
+            background-color: #FEFEFE;
+            box-shadow: 5px 5px 5px #ccca;
+            
+            .aside__closeTag{
+                font-size: 1.5em;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                color: red;
+            }
+
+            .aside__section{
+                margin-top: 1.5em;
+            }
+        }
+
+        .aside-true{
+            left: 0;
+            top: 0;
+        }
+
+        .aside-false{
+            top: 0;
+            left: -1000%;
+        }
+    }
+
+    .homePage__containerCards{
+        margin: auto;
+    }
     }
 }

@@ -7,6 +7,7 @@ import PriceFilter from "../components/HotelsPage/PriceFilter";
 
 const HomePage = () => {
   const [inputName, setInputName] = useState("");
+  const [asidePosition, setAsidePosition] = useState(false)
   const [fromTo, setFromTo] = useState({
     from: 0,
     to: Infinity
@@ -20,6 +21,13 @@ const HomePage = () => {
     setInputName(inputValue.current.value);
   };
 
+  const handleShowFilter = () => {
+    setAsidePosition(true)
+  }
+  const handleHiddenFilter = () => {
+    setAsidePosition(false)
+  }
+  
   const cbfilter = (hotelInfo) => {
     // FilterByName
     const filterName = hotelInfo.name
@@ -33,8 +41,10 @@ const HomePage = () => {
 
   return (
     <div className="homePage">
-      <aside className="aside">
-        <div className="aside__container">
+      <aside className={`aside`}>
+        <div onClick={handleShowFilter} className="aside__openTag"><i className=' aside__icon bx bx-menu'></i></div>
+        <div className={`aside__container aside-${asidePosition}`}>
+        <div onClick={handleHiddenFilter} className="aside__closeTag">X</div>
           <section className="aside__section">
             <input
               className="aside__input"

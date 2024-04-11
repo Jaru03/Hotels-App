@@ -5,11 +5,31 @@
   justify-content: center;
   align-items: center;
 
+  .reserve__modal--open{
+    scale: 1;
+  }
+
+  .reserve__modal--close{
+    scale: 0;
+  }
+
   .reserve__tittle{
     color: #D35451;
   }
 
   .reserve__form{
+    
+    .reservation__modal{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: rgb(35, 173, 35);
+      margin: .5em;
+      width: 100%;
+      height: 2em;
+    
+    }
 
     .reserve__label{
       display: inline-block;
@@ -51,4 +71,25 @@
 
 
 
+}
+
+@media (max-width: 450px){
+  .reserve{
+    
+    .reserve__form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .reservation__modal{
+        width: 15em;
+        .reservation__modal--text{
+          font-size: .6em;
+        }
+      }
+      
+    }
+
+  }
 }

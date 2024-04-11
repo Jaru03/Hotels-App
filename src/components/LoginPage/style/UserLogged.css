@@ -1,0 +1,30 @@
+.userLogged{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  .userLogged__header{
+    border: 3px solid black;
+    border-radius: 50%;
+    .userLogged__img{
+      
+    }
+  }
+
+  .userLogged__button{
+    width: 10em;
+    padding: .4em;
+    border: 1px solid #ccca;
+    color: white;
+    background-color: #D35451;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #e23431;
+    }
+  }
+}

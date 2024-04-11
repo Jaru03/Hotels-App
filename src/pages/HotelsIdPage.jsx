@@ -23,20 +23,20 @@ const HotelsIdPage = () => {
       <h3 className="hotelsId__rating">RATING - {hotel?.rating}</h3>
       <div className="hotelsId__container--header">
 
-      <div className="hotelsId__slider">
-        <img className="hotelsId__img" src={hotel?.images[0].url} alt="" />
-      </div>
-      <div className="hotelsId__map">
-      {
-        hotel &&
-        
-        <Map height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={8} maxZoom={13} minZoom={8} >
-        <Overlay anchor={[+hotel?.lat, +hotel?.lon]}>
-          <img src='../hotelIcon.png'  width={50} height={50} alt="" />
-        </Overlay>
-      </Map>
-      }
-      </div>
+        <div className="hotelsId__slider">
+          <img className="hotelsId__img" src={hotel?.images[0].url} alt="" />
+        </div>
+        <div className="hotelsId__map">
+        {
+          hotel &&
+          
+          <Map className='map' metaWheelZoom={true} width={350} height={300} defaultCenter={[+hotel?.lat, +hotel?.lon]} zoom={10} maxZoom={13} twoFingerDrag={true} minZoom={10} >
+          <Overlay anchor={[+hotel?.lat, +hotel?.lon]}>
+            <img src='../hotelIcon.png'  width={50} height={50} alt="" />
+          </Overlay>
+        </Map>
+        }
+        </div>
       </div>
       <section className="hotelsId__info">
         <h3 className="hotelsId__tittle">{hotel?.city.name}, {hotel?.city.country}</h3>

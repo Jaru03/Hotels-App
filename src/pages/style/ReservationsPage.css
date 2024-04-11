@@ -1,5 +1,6 @@
 .reservationPage{
   padding: 1.5em;
+  position: relative;
 
   .reservationPage__tittle{
     text-align: center;

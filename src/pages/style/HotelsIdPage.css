@@ -62,3 +62,27 @@
     }
   }
 }
+
+@media (max-width: 450px){
+
+  .hotelsId{
+
+    .hotelsId__container--header{
+      flex-direction: column;
+
+      .hotelsId__slider{
+        width: 20em;
+        
+      }
+
+      .hotelsId__map{
+        width: 100%;
+      }
+    }
+  }
+
+  .pigeon-overlays{
+    width: 100%;
+  }
+  
+}

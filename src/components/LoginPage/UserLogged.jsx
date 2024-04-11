@@ -1,3 +1,5 @@
+import './style/UserLogged.css'
+
 const UserLogged = ({setUser, user}) => {
   
 
@@ -8,12 +10,12 @@ const UserLogged = ({setUser, user}) => {
     }
 
     return (
-    <article>
-        <header><img src={
+    <article className="userLogged">
+        <header className='userLogged__header'><img className='userLogged__img' src={
             user.gender === 'female' ? '../famaleIcon.png': '../maleIcon.png'
         } alt="" /></header>
-        <h2>{user.firstName} {user.lastName}</h2>
-        <button onClick={handleLogout}>Logout</button>
+        <h2 className='userLogged__name'>{user.firstName} {user.lastName}</h2>
+        <button className='userLogged__button' onClick={handleLogout}>Logout</button>
     </article>
   )
 }

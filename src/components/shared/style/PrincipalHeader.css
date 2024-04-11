@@ -40,3 +40,10 @@
         }
     }
 }
+
+@media (max-width: 630px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }   
+}

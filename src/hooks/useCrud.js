@@ -2,19 +2,19 @@ import axios from "axios"
 import { useState } from "react"
 import getConfigToken from "../services/getConfigToken"
 
-const useCrud = (url) => {
+const useCrud = () => {
     
     const [response, setResponse] = useState()
     
     //getApi
-    const getApi = () => {
+    const getApi = (url) => {
         axios.get(url, getConfigToken())
         .then(res => setResponse(res.data))
         .catch(err => console.log(err))
     }
 
     //postApi
-    const postApi = (data) => {
+    const postApi = (url, data) => {
         axios.post(url, data, getConfigToken())
         .then(res => {
             console.log(res.data)
@@ -24,16 +24,15 @@ const useCrud = (url) => {
 
     }
     //delteApi
-    const deleteApi = (id) => {
-        axios.delete(url, id, getConfigToken())
+    const deleteApi = (url, id) => {
+        axios.delete(url, getConfigToken())
         .then(res => {
-            console.log(res.data)
             setResponse(response.filter(e => e.id !== id))
         })
         .catch(err => console.log(err))
     }
     //updateApi
-    const updateApi = (data, id) => {
+    const updateApi = (url, data, id) => {
         axios.put(url, data, id, getConfigToken())
         .then(res => {
             console.log(res.data)
