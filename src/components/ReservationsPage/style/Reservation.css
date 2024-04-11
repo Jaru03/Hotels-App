@@ -40,6 +40,8 @@
     .reservationCard__list{
       list-style: none;
       .reservationCard__item{
+        display: flex;
+        flex-direction: column;
         font-size: .9em;
         padding: .5em 0;
 
