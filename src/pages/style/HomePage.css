@@ -70,6 +70,7 @@
         .aside{
             position: relative;
             height: 100%;
+            z-index: 1;
             
             .aside__openTag{
                 position: fixed;
